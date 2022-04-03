@@ -1,7 +1,7 @@
 pipeline {
-
+  agent { label 'linux' }
   options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))//aman
+    buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
     HEROKU_API_KEY = credentials('yazidzaidan-heroku-api-key')
